@@ -1,11 +1,24 @@
 package clases;
 
 public class Main {
-    public static void main(String[] args) {
-        // Instancias
-        JmC_Circulo circulo1 = new JmC_Circulo(1, 3.0, "verde");
-        JmC_Rectangulo rectangulo1 = new JmC_Rectangulo(1, 3.0, 4.0, "rojo");
+    // Constantes para evitar números mágicos (9.8)
+    private static final int ID_FIGURA = 1;
+    private static final double RADIO_CIRCULO = 3.0;
+    private static final double LADO_A_RECTANGULO = 3.0;
+    private static final double LADO_B_RECTANGULO = 4.0;
+    private static final String COLOR_VERDE = "verde";
+    private static final String COLOR_ROJO = "rojo";
 
+    public static void main(String[] args) {
+        // Instancias con constantes
+        JmC_Circulo circulo1 = new JmC_Circulo(ID_FIGURA, RADIO_CIRCULO, COLOR_VERDE);
+        JmC_Rectangulo rectangulo1 = new JmC_Rectangulo(
+            ID_FIGURA, 
+            LADO_A_RECTANGULO, 
+            LADO_B_RECTANGULO, 
+            COLOR_ROJO
+        );
+        
         // Cálculos
         double areaRectangulo = rectangulo1.calcularArea(); // Usa el método de JmC_Rectangulo
         double areaCirculo = circulo1.calcularArea(); // Usa el método de JmC_Circulo
@@ -15,15 +28,6 @@ public class Main {
         imprimirResultados(rectangulo1, circulo1, diferencia);
     }
 
- // ESTOS MÉTODOS DEBEN ELIMINARSE (ya están en JmC_Rectangulo y JmC_Circulo)
-    /*public static double calcularAreaRectangulo(JmC_Rectangulo r) {
-        return r.getLadoA() * r.getLadoB();
-    }
-
-    public static double calcularAreaCirculo(JmC_Circulo c) {
-        return Math.PI * c.getRadio() * c.getRadio();
-    }
-*/
     public static double calcularDiferenciaAreas(double area1, double area2) {
         return area1 - area2;
     }
