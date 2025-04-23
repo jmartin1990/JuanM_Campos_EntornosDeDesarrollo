@@ -1,23 +1,35 @@
 package clases;
 
+/**
+ * Clase que representa un rectángulo con lados A y B, color e ID.
+ * @author Juan Campos
+ * @version 1.0
+ */
+
+//Atributos
+
 public class JmC_Rectangulo {
 	private int id;
     private double ladoA;
     private double ladoB;
     private String color;
-	/**
-	 * Constructor por defecto (generado automáticamente)
+	
+    /**
+	 * Constructor por defecto (generado automáticamente). Crea un rectángulo con valores predeterminados.
 	 */
+    
 	public JmC_Rectangulo() {
 		// TODO Auto-generated constructor stub
 	}
 	
-	/** Constructor con argumentos (generado automáticamente)
-	 * @param id
-	 * @param ladoA
-	 * @param ladoB
-	 * @param color
+	/**
+	 * Constructor con parámetros. (generado automáticamente)
+     * @param id Identificador único del rectángulo (entero).
+     * @param ladoA Longitud del lado A (en unidades métricas, ej: cm).
+     * @param ladoB Longitud del lado B (en unidades métricas, ej: cm).
+     * @param color Color del rectángulo (ej: "rojo").
 	 */
+	
 	public JmC_Rectangulo(int id, double ladoA, double ladoB, String color) { /*AQUI AUNQUE EL METOD TIENE EL MISMO NOMBRE LE PASO COMO PARAMETRO ALGO COMO UN ID YA NO ES LO MISMO METODO YA QUE ESTOY HACIENDO UNA SOBRECARGA ME METODOS Y AY NO SERIA LO MISMO*/
 		this.id = id;
 		this.ladoA = ladoA;
@@ -81,6 +93,11 @@ public class JmC_Rectangulo {
 	public void setColor(String color) {
 		this.color = color;
 	}
+	
+	/**
+	 * Calcula el área del rectángulo (ladoA * ladoB).
+     * @return Área en unidades cuadradas (ej: cm²). 
+	 */
 	
 	public double calcularArea() {
 	    return this.ladoA * this.ladoB;
