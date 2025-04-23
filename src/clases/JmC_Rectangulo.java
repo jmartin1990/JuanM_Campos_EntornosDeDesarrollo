@@ -81,6 +81,10 @@ public class JmC_Rectangulo {
 	public void setColor(String color) {
 		this.color = color;
 	}
+	
+	public double calcularArea() {
+	    return this.ladoA * this.ladoB;
+	}
 
 	// toString (generado automáticamente)
 	@Override

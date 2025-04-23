@@ -67,6 +67,10 @@ public class JmC_Circulo {
 		this.color = color;
 	}
 
+	public double calcularArea() {
+	    return Math.PI * this.radio * this.radio;
+	}
+	
 	// toString (generado automáticamente)
 	
 	@Override
